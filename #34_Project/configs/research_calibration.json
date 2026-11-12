@@ -1,0 +1,69 @@
+{
+  "stage": "calibration",
+  "base_config": "generated.json",
+  "map_seeds": [
+    31,
+    37,
+    41
+  ],
+  "observation_seeds": [
+    2100,
+    2101
+  ],
+  "noise_factors": [
+    1.0
+  ],
+  "horizons": [
+    120
+  ],
+  "profiles": [
+    {
+      "name": "retained_c2",
+      "certificate_mode": "retained",
+      "multiplier": 2,
+      "methods": [
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "retained_c3",
+      "certificate_mode": "retained",
+      "multiplier": 3,
+      "methods": [
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "retained_c4",
+      "certificate_mode": "retained",
+      "multiplier": 4,
+      "methods": [
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "current_lcb_c2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 2,
+      "methods": [
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "current_lcb_c3",
+      "certificate_mode": "current_lcb",
+      "multiplier": 3,
+      "methods": [
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "current_lcb_c4",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4,
+      "methods": [
+        "sno_es2"
+      ]
+    }
+  ]
+}

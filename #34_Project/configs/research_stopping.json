@@ -1,0 +1,39 @@
+{
+  "stage": "stopping",
+  "base_config": "generated.json",
+  "map_seeds": [
+    31,
+    37,
+    41
+  ],
+  "observation_seeds": [
+    2100
+  ],
+  "noise_factors": [
+    1.0
+  ],
+  "horizons": [
+    120,
+    240
+  ],
+  "profiles": [
+    {
+      "name": "source",
+      "certificate_mode": "retained",
+      "multiplier": 2,
+      "methods": [
+        "sno_basic",
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "revalidated",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4,
+      "methods": [
+        "sno_basic",
+        "sno_es2"
+      ]
+    }
+  ]
+}

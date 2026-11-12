@@ -1,0 +1,30 @@
+{
+  "snomdp": {
+    "repository": "https://github.com/akifumi-wachi-4/safe_near_optimal_mdp",
+    "commit": "e88370ef87a4f8eff8b731339a7721508d1bd3b0"
+  },
+  "safemdp": {
+    "repository": "https://github.com/befelix/SafeMDP",
+    "commit": "725eaaeb445f88cffa0c695d59be0a30e84cd2c3"
+  },
+  "map_source": "data/simple/random_settings.npz",
+  "map_sha256": "c972a9fd6f5bf6f4f0721311cf54c9ed8b6c14c1bb11e905111dada8f066cd5b",
+  "reference_archive_sha256": "1b51537954ae305f429f1413540091d64171ed4bc9fbec8ed310eaa05ead42dd",
+  "source_files": {
+    "snomdp/arguments.py": "e648d2fce9888a1228767f48d133402c2028b25fc6f2e31ea1d505f855d42422",
+    "snomdp/gp_safety_gym.py": "ca80a5d0ac54023b8356929e7ba082ec773802f0442355f9e28d761e117d73cb",
+    "snomdp/main_sno_mdp.py": "06f8d23e55d74b604eaa1c631f19960c262595073d45d5bde3b93d85780223a9",
+    "snomdp/main_safemdp.py": "d13454dded98bed82abe6ebca8daecdbe8ec95cc6d3d60ddb77724effa8500bd",
+    "snomdp/main_oracle.py": "338350f4ec6940469cc9be6c4c64ce2a22333324e512ad4cf5c29d5ee9d65de3",
+    "snomdp/simple_make_rand_settings.py": "5ff22e14a26335779b29bd76a9969072e023f5f31ea6cad32d5de56259c15b09",
+    "snomdp/utils/mdp_utilities.py": "64b9ad2b423ef4f6a52d89bf0a9bd3c38a6dbdcb59b0595f7c3b1399796535a3",
+    "snomdp/utils/safety_utilities.py": "3766da6bcb86626237200c9877ca2ca5d5b2b0b01121aee09e20ac3e3c5de9bc",
+    "snomdp/utils/reward_utilities.py": "860148238cd35400e61240886fa0549048dd41fc8c51973f2e87c0fa33f1807d",
+    "snomdp/README.md": "818ec1184f67c3c91537fac64ffa19e857ef4c12da49fc98a7ff838c611c4f11",
+    "snomdp/LICENSE": "dfe2c5fbdd7c8c778ac0c388174ae4634ed6bf47aef9d62d09d1bbefd1e12c62",
+    "safemdp/safemdp/grid_world.py": "9685f44f862f354f2adde8883f6d22d193ab46bad946123d623c05d1d15f3598",
+    "safemdp/safemdp/SafeMDP_class.py": "f6510b591daa7257c0912f2405ac6cba163f3dd30bcc99b8e5d79af5b2fc0590",
+    "safemdp/safemdp/utilities.py": "e20961dee7eda92deca949ffbe8a0b2d0cb716d0f900db7cf20c6b0ad0e32725",
+    "safemdp/LICENSE": "eeb0c5e607052105636d2bebb8f53146c0883ef2bc9ee1315f296efd6fcb020f"
+  }
+}

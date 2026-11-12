@@ -1,0 +1,22 @@
+{
+  "base_config": "generated.json",
+  "grids": [
+    [
+      20,
+      20
+    ]
+  ],
+  "map_seeds": [
+    31,
+    37,
+    41
+  ],
+  "observation_seeds": [
+    2100,
+    2101
+  ],
+  "noise_factors": [
+    1.0
+  ],
+  "horizon": 80
+}

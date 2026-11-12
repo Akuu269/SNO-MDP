@@ -1,0 +1,11 @@
+{
+  "purpose": "development integration sample, not held-out evaluation",
+  "product_id": "DTEED_076767_1510_076833_1510_A01",
+  "slope_limit_degrees": 25,
+  "aggregation_block": 4,
+  "attempts": [
+    {"dataset": "claritas", "row": 4778, "col": 1640, "side": 42, "safe_cells": 0, "outcome": "no safe starting region; retained"},
+    {"dataset": "claritas_row1000", "row": 1000, "col": 1640, "side": 42, "safe_cells": 71, "outcome": "valid first row-major safe 2x2 starting region"}
+  ],
+  "selection_basis": "valid initial safe region at a fixed slope limit, not return, expansion, or ES2 performance"
+}

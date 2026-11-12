@@ -1,0 +1,22 @@
+{
+  "rows": 20,
+  "cols": 20,
+  "map_source": "released",
+  "map_seed": 7,
+  "observation_seed": 2026,
+  "grid_spacing": 0.5,
+  "safety_threshold": -0.25,
+  "reward_noise_std": 0.001,
+  "safety_noise_std": 0.001,
+  "assumed_noise_factor": 1.0,
+  "gp_length_scale": 2.0,
+  "gp_prior_variance": 1.0,
+  "safety_confidence_multiplier": 2.0,
+  "reward_confidence_multiplier": 3.0,
+  "expander_lipschitz": 0.0,
+  "exploration_accuracy": 0.005,
+  "discount": 0.99,
+  "horizon": 120,
+  "value_tolerance": 1e-08,
+  "max_iterations": 5000
+}

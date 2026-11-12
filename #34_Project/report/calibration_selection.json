@@ -1,0 +1,25 @@
+{
+  "selected_multiplier": 4,
+  "candidates": [
+    {
+      "multiplier": 2,
+      "failure_rate": 0.0,
+      "unsafe_run_rate": 0.0,
+      "mean_reward_ratio": 0.6902676448415751
+    },
+    {
+      "multiplier": 3,
+      "failure_rate": 0.0,
+      "unsafe_run_rate": 0.0,
+      "mean_reward_ratio": 0.6716289155500067
+    },
+    {
+      "multiplier": 4,
+      "failure_rate": 0.0,
+      "unsafe_run_rate": 0.0,
+      "mean_reward_ratio": 0.8311833113731674
+    }
+  ],
+  "rule": "Predeclared lexicographic order: failure rate, unsafe-run rate, negative mean reference ratio, multiplier. Development data only.",
+  "calibration_runs_sha256": "38a7492901d5924071e122240729a4755272ca9829c0524a07b68663ce2aecc8"
+}

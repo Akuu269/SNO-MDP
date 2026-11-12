@@ -1,0 +1,52 @@
+{
+  "stage": "final",
+  "base_config": "generated.json",
+  "map_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "observation_seeds": [
+    3000,
+    3001
+  ],
+  "noise_factors": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "horizons": [
+    160
+  ],
+  "profiles": [
+    {
+      "name": "source",
+      "certificate_mode": "retained",
+      "multiplier": 2,
+      "methods": [
+        "safemdp",
+        "sno_basic",
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "confidence",
+      "certificate_mode": "retained",
+      "multiplier": 4,
+      "methods": [
+        "sno_es2"
+      ]
+    },
+    {
+      "name": "revalidated",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4,
+      "methods": [
+        "sno_es2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "candidate_multipliers": [
+    2,
+    3,
+    4
+  ],
+  "certificate_mode": "current_lcb",
+  "ranking": [
+    "failure_rate",
+    "unsafe_run_rate",
+    "negative_mean_reward_ratio",
+    "multiplier"
+  ],
+  "final_map_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "final_observation_seeds": [
+    3000,
+    3001
+  ],
+  "final_noise_factors": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "final_horizon": 160,
+  "stopping_horizons": [
+    120,
+    240
+  ],
+  "stopping_map_seeds": [
+    31,
+    37,
+    41
+  ],
+  "stopping_observation_seeds": [
+    2100
+  ],
+  "no_final_outcome_tuning": true
+}

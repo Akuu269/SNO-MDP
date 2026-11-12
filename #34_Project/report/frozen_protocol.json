@@ -1,0 +1,2031 @@
+{
+  "spec": {
+    "stage": "final",
+    "base_config": "generated.json",
+    "map_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "observation_seeds": [
+      3000,
+      3001
+    ],
+    "noise_factors": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "horizons": [
+      160
+    ],
+    "profiles": [
+      {
+        "name": "source",
+        "certificate_mode": "retained",
+        "multiplier": 2,
+        "methods": [
+          "safemdp",
+          "sno_basic",
+          "sno_es2"
+        ]
+      },
+      {
+        "name": "confidence",
+        "certificate_mode": "retained",
+        "multiplier": 4,
+        "methods": [
+          "sno_es2"
+        ]
+      },
+      {
+        "name": "revalidated",
+        "certificate_mode": "current_lcb",
+        "multiplier": 4,
+        "methods": [
+          "sno_es2"
+        ]
+      }
+    ]
+  },
+  "base_config": {
+    "rows": 20,
+    "cols": 20,
+    "map_source": "generated",
+    "map_seed": 7,
+    "observation_seed": 2026,
+    "grid_spacing": 0.5,
+    "safety_threshold": -0.25,
+    "reward_noise_std": 0.001,
+    "safety_noise_std": 0.001,
+    "assumed_noise_factor": 1.0,
+    "gp_length_scale": 2.0,
+    "gp_prior_variance": 1.0,
+    "safety_confidence_multiplier": 2.0,
+    "certificate_mode": "retained",
+    "reward_confidence_multiplier": 3.0,
+    "expander_lipschitz": 0.0,
+    "exploration_accuracy": 0.005,
+    "discount": 0.99,
+    "horizon": 80,
+    "value_tolerance": 1e-08,
+    "max_iterations": 5000
+  },
+  "source_sha256": {
+    "__init__.py": "da4b76adaeca156796b9929157a987f8ce4e36f4484678750a296cd1c6f4cdea",
+    "__main__.py": "e6a5b8a9b0f5bc30f863a0f88db0d1acf6a56ac41415d9dfd346748a63a015be",
+    "agent.py": "93f3a6c3ba8e47b0becda79a94b711cbdbadc590132328a040d80d054655ad9f",
+    "artifacts.py": "97f672c3e4b5d87d418b8bb2e7f127eba14dbfb6d043233c54cac58255112b45",
+    "benchmark.py": "7f6da6cb0180f8c0427ef09c57a628c5a66c48773071f07e97ef00eeb99deb06",
+    "benchmark_visualization.py": "2089f8a9b4f33b4dfaf191d38e9be8b8e3a30e72c30831715fde70dae444a8f6",
+    "config.py": "e8c4dff39856fb2c46b56cf93f214452e111282f2b193678e860973f4355f81e",
+    "diagnostic_report.py": "d808fe72772a867753c095cacd252ba4ebaf9f8822934a0a6d83a8a31eb3eb3b",
+    "diagnostics.py": "33bedaefdd3366b3dc9ffe8365fea2ae58809c8f5d703bfe6dd7116cb9d89189",
+    "environment.py": "7e7f7136e8f8d19286dcff3e69ad4a3090ff9c655dac0f1ed9a0db6c5f3757cf",
+    "experiment.py": "bcd88f28168f9ce1531703e9717672c19d7e31a335ae6c1058080940d753f444",
+    "figures.py": "7eaf8bd8e1690b9d8ed543651f6c2c7e1815e3df003d85b1ca2a596d0e2535e9",
+    "gp.py": "c878eb7c5feefc5e5b4e52a47f8ff99278904d8bc6b580ce048980c21ac2aabc",
+    "gp_safety_gym.py": "2fe87a660ebb817ad8940e394b627fb8c94daf3a7bf6e80969c1b666cf559d74",
+    "graph.py": "504547ed235f63482766ea80ec33e704c1fe636e5a639d7a8420b40ec6e3bd95",
+    "planning.py": "5ab5a573fe97b3de5df7890da0d0607f91478aefcc80b73d62e110f5b2e20677",
+    "research.py": "fbe516c047fac2029b7d25eee2554d0b5733250112ee68c59614af3f6bf06df9",
+    "research_report.py": "d11e640601d2e3796d03a1e4558d9566bb3ea2cf5c8af8c4566012911827e1f5",
+    "reward_planning.py": "aade66cd352e4795a91904ae8cf882d1a6872884b63b40d79660745e51042b0f",
+    "run.py": "3adeaa3adbca319ed83ac675ffbad833078dba9f8a02078321120842a7ae390d",
+    "submission.py": "a8e76b0820b550d2e72a14d886b433dd5318646e133fcb24bfa18075f7f54a03",
+    "transition_sets.py": "ea2c21d9e35db342268045f459ada4ce8f19895d186fc159bb709b922b7b488b",
+    "visualization.py": "78aa22f46ed38c6991e001fdc7b580cf4819a2b093d5c0cb07a7a2ce9222f892"
+  },
+  "planned_cases": [
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 100,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 101,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 102,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 103,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 104,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3000,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": null,
+      "profile": "oracle",
+      "method": "oracle",
+      "certificate_mode": "retained",
+      "multiplier": 2.0
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 0.5,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 1.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "safemdp",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_basic",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "source",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 2
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "confidence",
+      "method": "sno_es2",
+      "certificate_mode": "retained",
+      "multiplier": 4
+    },
+    {
+      "map_seed": 105,
+      "observation_seed": 3001,
+      "horizon": 160,
+      "noise_factor": 2.0,
+      "profile": "revalidated",
+      "method": "sno_es2",
+      "certificate_mode": "current_lcb",
+      "multiplier": 4
+    }
+  ],
+  "rules": {
+    "aggregation": "Observation means within each map, then map means; SD across maps.",
+    "failures": "All planned failures retained; zero extra reward after a failed prefix.",
+    "selection": "Settings selected on calibration only; no final-outcome tuning.",
+    "oracle": "Infinite-horizon true-map policy, finite equal rollout; ratio descriptive.",
+    "scope": "Headless source-audited port; current_lcb is a project extension."
+  }
+}

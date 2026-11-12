@@ -1,0 +1,21 @@
+{
+  "base_config": "released.json",
+  "grids": [
+    [
+      20,
+      20
+    ]
+  ],
+  "map_seeds": [
+    0
+  ],
+  "observation_seeds": [
+    2026
+  ],
+  "noise_factors": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "horizon": 40
+}

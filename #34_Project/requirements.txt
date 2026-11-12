@@ -1,0 +1,3 @@
+# Verified with Python 3.9.6; Matplotlib is used only for benchmark figures.
+numpy==2.0.2
+matplotlib==3.9.4

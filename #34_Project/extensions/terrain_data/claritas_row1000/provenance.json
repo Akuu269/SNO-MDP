@@ -1,0 +1,26 @@
+{
+  "rows": 9599,
+  "cols": 3323,
+  "dtype": "<f4",
+  "pixel_spacing_m": 2.013355560119,
+  "image_offset_bytes": 13292,
+  "scaling_factor": 1.0,
+  "offset": 0.0,
+  "product_id": "DTEED_076767_1510_076833_1510_A01",
+  "source_url": "https://hirise-pds.lpl.arizona.edu/PDS/DTM/ESP/ORB_076700_076799/ESP_076767_1510_ESP_076833_1510/DTEED_076767_1510_076833_1510_A01.IMG",
+  "catalog_url": "https://hirise.lpl.arizona.edu/dtm/ESP_076767_1510",
+  "crop_row": 1000,
+  "crop_col": 1640,
+  "crop_side": 42,
+  "byte_range": [
+    13311852,
+    13856991
+  ],
+  "source_range_sha256": "d114eff56043e135c41141153b9c833a0fe0072261df090b2881db2cb68f1d94",
+  "label_range_sha256": "c85d3a02a01c3c63eb2c5683bad7b370cd74afc7e3bbbdce8e5bb310d751cf1c",
+  "elevation_file_sha256": "0327245698a144efc44fcb4370361c435e3345d8c4b8fd5841016c32fcc66b01",
+  "source_hash_scope": "Downloaded label range and crop-containing byte range, not the full remote DEM",
+  "elevation_units": "meters",
+  "source_kind": "measured HiRISE Mars stereo terrain product",
+  "crop_selection": "explicit source pixel window: row 1000, col 1640; chosen only after the centered window failed the fixed 25-degree initial-safe-region validity rule"
+}
