@@ -6,6 +6,8 @@ The environment is a **headless port of the authors’ GP-Safety-Gym discrete be
 
 ## Read in this order
 
+Start with the [complete paper-to-presentation guide](06_Final_Complete_Project_Guide.md) for one step-by-step learning document covering fundamentals, paper theory, implementation, experiments, reproduction, and the professor demonstration.
+
 1. [Project roadmap](05_Project_Plan.md): deliverables and remaining human work.
 2. [Method](docs/method.md): equations, source differences, and certificate handling.
 3. [Experiment protocol](docs/experiments.md): development selection, stopping, and frozen evaluation.
