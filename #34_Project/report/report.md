@@ -65,7 +65,7 @@ Finite maps and practical confidence bands establish no uniform safety guarantee
 
 ## Presentation, team, and references
 
-[Presentation PDF](presentation.pdf) · [Browser slides](presentation.html) · [Speaker notes](presentation.md) · [Human team review](team_review.md).
+[PowerPoint](presentation.pptx) · [Presentation PDF](presentation.pdf) · [Browser slides](presentation.html) · [Speaker notes](presentation.md) · [Four-member timing plan](team_presentation_plan.md) · [Human team review](team_review.md).
 
 - [Wachi and Sui, ICML 2020](https://proceedings.mlr.press/v119/wachi20a.html).
 - [Local paper](../SNO_MDP_Wachi_Sui_2020_arxiv_v1.pdf).

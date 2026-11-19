@@ -16,6 +16,8 @@ Throughout this guide:
 
 Keep these four categories separate when writing or presenting.
 
+**Interactive companion:** Run `python3 -m analysis_ui` from this project folder and open http://127.0.0.1:8765 to inspect the saved evidence and launch exploratory experiments. The [dashboard walkthrough](docs/interactive_ui.md) connects the controls, maps, GP bounds, and comparison graphs to the concepts in this guide.
+
 ## Contents
 
 1. [The problem and our objective](#1-the-problem-and-our-objective)
@@ -1360,22 +1362,21 @@ Source-equivalence tests exercise explicitly reviewed pure helper definitions fr
 
 ### 23.2 Presentation sequence
 
-| Slide | Explain | Evidence |
-|---|---|---|
-| 1 | Problem and research question | Unknown safety versus reward |
-| 2 | Known/unknown information and safety feature | One grid movement example |
-| 3 | GP inference and the SNO-MDP loop | Mean, covariance, safe graph, reward planning |
-| 4 | Diagnostic mechanism and extension | Earlier accepted certificate versus current bound |
-| 5 | Calibration and frozen evaluation | Selection record, maps/seeds, controls |
-| 6 | Held-out reward | Mean curves and budgets |
-| 7 | Region/certificate behavior | Believed permissions versus evaluator errors |
-| 8 | Safety, failures, effort, computation | Separate metrics and denominators |
-| 9 | Paired comparisons | Read named baseline and map SD correctly |
-| 10 | Conclusions and limits | Measured tradeoff, reproducibility, scope |
+| Slides | Presenter | Explain | Evidence |
+|---|---|---|---|
+| 1–4 | Member 1 | Paper objective, unknowns, assumptions, prior methods and scope | Safe seed, RKHS/Lipschitz regularity, conditional guarantees |
+| 5–8 | Member 2 | Two GPs, pessimistic/optimistic regions, expanders, revalidation, ES2 versus P-ES2 | Bounds, source deviations, implemented versus paper-only methods |
+| 9–12 | Member 3 | Evaluation and reward/safety/robustness graphs | Frozen raw curves, matched-noise variability, all-factor results |
+| No PPT slides | Member 4 | Dashboard only: actual decision, experiment, evidence and closing | Step 96/97, matched controls, small live batch |
+| 13–19 | Q&A only | Numerical results, saved dashboard, author experiments, P-ES2, parameters, viva and limits | Excluded from the timed slide talk; literature and project results labelled separately |
 
-Existing materials: [PDF slides](report/presentation.pdf), [browser slides](report/presentation.html), [speaker notes](report/presentation.md).
+Existing materials: [final PowerPoint](report/presentation.pptx), [PDF slides](report/presentation.pdf), [browser slides](report/presentation.html), and [speaker notes](report/presentation.md). Follow the [team presentation plan](report/team_presentation_plan.md): the PPT belongs to Members 1–3; Member 4 has a separate dashboard-only slot. Each targets 3:30 and stays within four minutes.
+
+The [presentation claim review](report/presentation_claim_review.md) checks the supplied outline against the paper and current implementation, including P-ES2/Mars attribution, confidence notation, parameter defaults, and unsupported result claims.
 
 ### 23.3 Demonstration procedure
+
+This is the longer preparation procedure. For Member 4’s four-minute slot, use the shortened timed sequence and fallback in [the team plan](report/team_presentation_plan.md).
 
 1. Open [the final dashboard](results/final/index.html) and state the sample counts.
 2. Open [source](results/demo_source/index.html) and [revalidated](results/demo_revalidated/index.html) demos.

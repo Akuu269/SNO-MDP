@@ -1,0 +1,4 @@
+condition,mean_return,return_map_sd,mean_unsafe_actions,runs,maps
+ES2 retained · c=2,177.55519954581186,80.04045079531056,2.5,12,6
+ES2 retained · c=4,157.18405788464057,55.97366178522573,0.0,12,6
+ES2 revalidated · c=4,155.30563979936917,55.054847589548004,0.0,12,6

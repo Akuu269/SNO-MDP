@@ -29,6 +29,16 @@ The supplied dependencies were checked with Python 3.9.6. Use an existing enviro
 
 ## Demonstration
 
+For the interactive experiment dashboard, run from this project folder:
+
+```bash
+python3 -m analysis_ui
+```
+
+Open **http://127.0.0.1:8765**. Replay saved runs, inspect GP safety bounds, compare methods and final-study graphs, or launch new runs and parameter sweeps. Begin with **New experiment → Quick 6 × 6**. New outputs go under `results/interactive/`; recorded final-study files are read-only in the dashboard. No additional dependencies or frontend build are needed. See the [dashboard guide](docs/interactive_ui.md) for a walkthrough and analysis rules.
+
+For the professor demonstration, follow the [UI presentation guide](report/ui_presentation_guide.md): it includes the exact step-96/97 failure example, matched controls, measured results, and what the study does and does not establish. The [UI review](docs/ui_review.md) records the critique and corrections.
+
 ```bash
 python3 -m sno_mdp run --config configs/smoke.json --method sno_es2 --output results/smoke_current/sno_es2
 python3 -m sno_mdp run --config configs/demo_source.json --method sno_es2 --output results/source_reproduced
@@ -54,11 +64,19 @@ The completed study’s entry point is `results/final/index.html`; its inventory
 
 ## Report and presentation
 
-The report, presentation PDF/browser slides, speaker notes, empirical interpretation, demo walkthrough, frozen protocol, and team-review form are under `report/`. The complete local submission archive is generated with:
+The [final PowerPoint](report/presentation.pptx), [PDF](report/presentation.pdf), [browser slides](report/presentation.html), and [speaker notes](report/presentation.md) contain **15 integrated slides**: Members 1–2 on 1–8, experimental design on 9, Member 3's four results graphs on 10–13, saved dashboard evidence on 14, and Thank You on 15. Srinivas then presents the live dashboard. The [Member 3 rehearsal](report/member3_results_rehearsal.md) is a five-minute script for final team slides 11–17; these correspond to slides 9–15 in this local preview. Follow the [team plan](report/team_presentation_plan.md). The [claim review](report/presentation_claim_review.md) separates verified paper facts from project evidence and unsupported claims.
+
+The complete [17-slide v4 deck](report/SNO-MDP_Team_Presentation_v4.pptx) preserves the saved v3 slides 1–10 and uses the five-minute Member 3 section on slides 11–17.
+
+**Member 3:** use the separate [results PowerPoint](report/member3_results.pptx) or [PDF](report/member3_results.pdf), with **four results slides—reward, safety–reward comparison, noise robustness, and ES2 exploration budget—plus a separate Thank You slide (five total)**. Read the [detailed results notes](report/member3_results_speaker_notes.md) for graph/table interpretation and viva answers; the [five-minute rehearsal](report/member3_results_rehearsal.md) covers the complete seven-slide section, including design and saved dashboard evidence. The [prepared section](report/member3_shared_deck_replacement.pptx) includes the same shortened speaker notes and definitions of Retained and Revalidated. Rebuild with `python3 report/build_member3_results.py`; the full team deck is preserved.
+
+The report, empirical interpretation, walkthrough, frozen protocol, and team-review form are also under `report/`. The complete local submission archive is generated with:
 
 ```bash
 python3 -m sno_mdp package
 ```
+
+That original package generator recreates its older ten-slide template and team-review form. Rebuild this team version afterward with `python3 report/build_team_presentation.py`; an existing submission ZIP does not automatically include the revised deck.
 
 Run `python3 -m scripts.export_noise_findings` to regenerate the posthoc noise/computation figures and discussion from the frozen results. Packaging writes `dist/SNO_MDP_Project.zip`, including source, data provenance, licenses, configurations, documentation, and saved results. Team names, actual contributions, independent human reproduction, professor formatting, and rehearsal must be confirmed by the team.
 

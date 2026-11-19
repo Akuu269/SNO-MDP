@@ -1,0 +1,252 @@
+{
+  "source": "Frozen results/final; no new experiments or altered results",
+  "aggregation": "Mean observation repeats within each map, then equal-weight map means",
+  "return_error_bars": "Sample SD across six map means, not confidence intervals",
+  "reward_curve_uncertainty": "Means only; variability is shown on the matched-noise slide",
+  "nominal_noise_factor": 1,
+  "actual_altitude_noise_std": 0.001,
+  "inputs": [
+    {
+      "path": "results/final/runs/map_100/obs_3000/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "17259bc53c23c629a415f606c41d38134e1cb5aea15679a57cd24bd410662883"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3001/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "b6bfa565573ae2faa74f674993ae6c0f9c634acb9c92920c70bac30a19671e99"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3000/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "cc5ef41c2bb01ffafbf4f04e65acd55d03aa17b92271d458b0a83183a47c7f2f"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3001/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "344aea2faa175ec5f8ecf831e6503909b4994d736e62a2272c5a9c4642ad49bd"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3000/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "7b07b9dc0aff3616ea9979e5829e956cec1f0b5529d133a8c694554acb4dd610"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3001/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "9e2b0ec0ec359f609d8239d0471feae6b10c0ca9c6eb0069cdeaece6984b4e16"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3000/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "0c7cde72f2a4a4727b8bc7aeb1923fe60ed31f8e7d076e23b53de136c958c18d"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3001/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "55b630c69e27cf5ba03c8e105ab833c9086187d9b4d369d403f4946414871491"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3000/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "980fa5dbd3bb1a63663dcfd0e8e0cadc5f3189221719b7cdf125a46aa41a6701"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3001/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "6029cbb1d64550dc9d49cd8d992d30041cd4bb285282d0d99f7a871caf699a3c"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3000/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "d0e756dde8ed124f09c90c9c5cdeafe12219e1532214f6bcaec1e9b3a513ac72"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3001/h_160/source/sno_basic/noise_1p0/progress.csv",
+      "sha256": "6eab33cc8b12eea9fc40186d7eb29fdde68b0b6507c6824747931fbc97ea269c"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3000/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "5149d2db51166454f7b99d0393aabd58446f6c7e5e1a5326d9127ca61045487e"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3001/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "b6bfa565573ae2faa74f674993ae6c0f9c634acb9c92920c70bac30a19671e99"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3000/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "4e659507024a2dad07922f4df142f18689583a21717260d86457e53d4d0893ce"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3001/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "bbdb1a960e0a75b6e82e6baee8d58d0a32205059f7770cc87bae67c30d9dff09"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3000/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "c8d9d943c0c407f7cbb5d213c57d471e8e80b0fdec5423b1f6d3d8337bdd56e5"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3001/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "87f001714c6c1c928ed5d790566aaf939c930730473573c688da4ef45a33420d"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3000/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "0cbbe902722f828368aff0243ec11a30824230a932c54aee55267ec169fc4777"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3001/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "87677785b3a2c51e50dfe2e864a3f2b2b5785f2ec443c67b7c35ce92e0ba62d1"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3000/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "cf38a108ad3b48e071a315430f2251f00e0b42b28ef984a1fc448e72b54f53db"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3001/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "7ce4f4e3632bbaf848476a9f85da8ecbcd19bbb6b92e2ba0c2c8ebe9b5b2d8fc"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3000/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "8fe1089017e00c36087128d586932c05e88119bf78c3cb708ab3d2c34399f028"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3001/h_160/source/sno_es2/noise_1p0/progress.csv",
+      "sha256": "cd88a2ba0265f9c5b8cfae228b51740d5edf161fd2e24ffd77319a702e1a6e20"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3000/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "13dfd47ced8b480fae2b46ac7b4db77e03e3ea33c7997a9e67ce876ce305caaf"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3001/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "cba37951e68f856d6bd32124059ca4d7afa10afb5525f9a7a5f27c8a4c0da4bc"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3000/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "9d2a22a464e8698af4bf0471353295f6c76016d962942ee2c7f33d5767f8e55d"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3001/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "781b3a7386178d3e0b6ed075e55df75e2a39e9e46306ec56f19d1d320c88948c"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3000/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "966815a0f7eebbb32e19d2a8d8fc427cd6368846685fa2ea1e79ef3eff2e936d"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3001/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "3b0b30416e83464affbf50bc619e7ba5106aeb48903cbded4ce721eb806a9576"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3000/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "e3fb896c53bf71be078f88d9b44f187a04adab50ff1ee6f573610303cab8f972"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3001/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "74a2b38f93e1d1d16b242f484783f11826e16e118bc108afc29474eb68becefd"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3000/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "51a35592b234d03040c720ade085f6bcb0130e141423e2e821da0e6a3b962fa9"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3001/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "16d0b63b499597adbfe568f2a02a0e69d5098a162e097066e57024d3ada5d65e"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3000/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "7f9f31363b2801cddc9c1b51fa29462c2d20080d184b1a92b10bcda59380c7d8"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3001/h_160/confidence/sno_es2/noise_1p0/progress.csv",
+      "sha256": "489fb28f1744d13222185d9221907f68aaabac4fd0be913ac085608a8d365333"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3000/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "0654df8784a739a738290a1723f302c92384079aa65b487c2cfe7eece117632f"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3001/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "c16f0707a1a44a5483875f0ef08a760f779d6690f7844bb93d63cea1a5b3f441"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3000/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "2bd7baa0477df5703225d5913c26e9e2f524ecfbb269bbd810304c541664a1a6"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3001/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "028856915a5ec801e9758ea8567579d58f2c4ab756ec14e7df7a7c43833a519a"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3000/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "c265119602d255eae86a23807f11a1f3523242fb2b4eed353dbdf2ece462ce39"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3001/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "ec6476afd2118066c09e080d452448b33490389bcc9159561a6f72921ad66f08"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3000/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "e3fb896c53bf71be078f88d9b44f187a04adab50ff1ee6f573610303cab8f972"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3001/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "b82fae95a2d020f1429f6f48556a78468cc4261fde76db1b1e39d5d691335ef4"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3000/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "61742444ffbdb1ecb8cb34eaee13e547146a74bde85fa980ce1ac64e89884931"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3001/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "1426a6b17c3c60dbb7fb7afed1a8c0dd058e5340b137ebd5c9e4d12e9c1a6cf6"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3000/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "fe4560490e5d423d095f893ea1c810771108f642c22283436fc01bfdbef244da"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3001/h_160/revalidated/sno_es2/noise_1p0/progress.csv",
+      "sha256": "f7ed8d615afe491b61051aa78740a48b04dd8cab5ed607a6b55d369dea966b54"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3000/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "27757a2ea3c5de9d764410066c3ae4b2742102dd0c592c5001d902a66ba2d55c"
+    },
+    {
+      "path": "results/final/runs/map_100/obs_3001/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "27757a2ea3c5de9d764410066c3ae4b2742102dd0c592c5001d902a66ba2d55c"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3000/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "99515f7a79c1cd51b16d40d44ae220aeb7808033bb47f8fae5add0973ca1c876"
+    },
+    {
+      "path": "results/final/runs/map_101/obs_3001/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "99515f7a79c1cd51b16d40d44ae220aeb7808033bb47f8fae5add0973ca1c876"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3000/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "fbc56c9535511933564b63109d11b3d0a0d7e9e0be51ed7091c83a3acb2b2228"
+    },
+    {
+      "path": "results/final/runs/map_102/obs_3001/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "fbc56c9535511933564b63109d11b3d0a0d7e9e0be51ed7091c83a3acb2b2228"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3000/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "14da264a773dfcd72936caf7914fce16df9fb415b59582efcbcf2123b633c6cc"
+    },
+    {
+      "path": "results/final/runs/map_103/obs_3001/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "14da264a773dfcd72936caf7914fce16df9fb415b59582efcbcf2123b633c6cc"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3000/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "f0d414b5022c2ccf5629b56dbdfbf1b9de563a3607ebb62afc4a8a3c8f22df3d"
+    },
+    {
+      "path": "results/final/runs/map_104/obs_3001/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "f0d414b5022c2ccf5629b56dbdfbf1b9de563a3607ebb62afc4a8a3c8f22df3d"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3000/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "98bb94acb46eff34d85bf15067e10f388ad5d75619d6e177b29717020a038db2"
+    },
+    {
+      "path": "results/final/runs/map_105/obs_3001/h_160/oracle/oracle/reference/progress.csv",
+      "sha256": "98bb94acb46eff34d85bf15067e10f388ad5d75619d6e177b29717020a038db2"
+    }
+  ],
+  "summary_sha256": "b5ea3ef9d10c61189401346a9a44d5359b5ab677d1ecad59572750605cbf7fa2",
+  "runs_sha256": "fd627bb30ac6be225d6a637d5716dcb180f2087f23a646b31ede161ae6c35251"
+}

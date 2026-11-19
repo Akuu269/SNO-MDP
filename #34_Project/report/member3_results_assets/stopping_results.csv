@@ -1,0 +1,5 @@
+condition,mean_exploration_actions,es2_fraction,runs,maps
+Basic c=2,160.0,0.0,12,6
+ES2 retained c=2,117.41666666666667,0.9166666666666666,12,6
+ES2 retained c=4,149.33333333333334,0.16666666666666666,12,6
+ES2 revalidated c=4,153.75,0.16666666666666666,12,6

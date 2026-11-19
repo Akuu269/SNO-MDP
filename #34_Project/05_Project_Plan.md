@@ -41,6 +41,7 @@ flowchart TD
 | Controlled research runner | All planned policies, setup/model failures, matched conditions, and map aggregation |
 | Frozen final protocol and verifier | Code/config guards, complete inventory, action/return/certificate checks |
 | Presentation and packaging tools | Report, PDF/browser slides, notes, manifest, complete ZIP |
+| Interactive analysis workspace | `python3 -m analysis_ui`: replay, exact GP-bound inspection, matched comparisons, parameter sweeps, and graph/CSV exports; [guide](docs/interactive_ui.md) |
 
 ## Evidence sequence
 

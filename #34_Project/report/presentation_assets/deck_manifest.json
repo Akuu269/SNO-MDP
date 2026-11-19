@@ -1,0 +1,155 @@
+{
+  "main_slides": 15,
+  "backup_slides": 0,
+  "members": 4,
+  "ppt_presenters": [
+    1,
+    2,
+    3
+  ],
+  "slide_allocation_seconds_per_member": {
+    "1": 200,
+    "2": 200,
+    "3": 300
+  },
+  "member_4_live_ui_seconds": 210,
+  "member_4_main_slides": [],
+  "experimental_design_slide": 9,
+  "result_graph_main_slides": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "saved_dashboard_evidence_slide": 14,
+  "thank_you_slide": 15,
+  "member3_source_deck": "report/member3_results.pptx",
+  "member3_rehearsal_text_preserved": true,
+  "member3_rehearsal_section_sha256": {
+    "1": "58fdfd175a1916a72bb55905dbd6cfac4f478c9b808a3cf2e92af530a5cbc1d9",
+    "2": "88f145229e63ec7ff59e15e2f5da2447cf6550a30c4444a7727fe0b17e7d2eb3",
+    "3": "614bcfa2518afe7a4edd2f3b3d549bc900911a7eaf2dacfe233b84ce661362a2",
+    "4": "0971d9a07991224c4605b9fdb0b3907cc78296c3785d7513c862a5a0aeb8fcbc",
+    "5": "26cc60514ae62127159072c7eaa655960f410f6da59bc2ddecc2f4f27196547c"
+  },
+  "source_matches_frozen": true,
+  "paper_source_url": "https://proceedings.mlr.press/v119/wachi20a/wachi20a.pdf",
+  "claim_review": "report/presentation_claim_review.md",
+  "slide_ownership": [
+    {
+      "slide": 1,
+      "member": 1,
+      "title": "SNO-MDP: learning reward while remaining safe",
+      "backup": false,
+      "slide_seconds": 40
+    },
+    {
+      "slide": 2,
+      "member": 1,
+      "title": "The challenge: learn two unknown functions safely",
+      "backup": false,
+      "slide_seconds": 60
+    },
+    {
+      "slide": 3,
+      "member": 1,
+      "title": "What makes the paper\u2019s guarantees possible?",
+      "backup": false,
+      "slide_seconds": 45
+    },
+    {
+      "slide": 4,
+      "member": 1,
+      "title": "From safe exploration to near-optimal reward",
+      "backup": false,
+      "slide_seconds": 55
+    },
+    {
+      "slide": 5,
+      "member": 2,
+      "title": "Two GPs: uncertainty for safety and optimism for reward",
+      "backup": false,
+      "slide_seconds": 55
+    },
+    {
+      "slide": 6,
+      "member": 2,
+      "title": "Pessimistic, optimistic, and expansion candidates",
+      "backup": false,
+      "slide_seconds": 50
+    },
+    {
+      "slide": 7,
+      "member": 2,
+      "title": "Our extension: recheck historical safety permissions",
+      "backup": false,
+      "slide_seconds": 55
+    },
+    {
+      "slide": 8,
+      "member": 2,
+      "title": "ES2 and P-ES2: different auxiliary planning models",
+      "backup": false,
+      "slide_seconds": 40
+    },
+    {
+      "slide": 9,
+      "member": 3,
+      "title": "Experimental design: freeze first, evaluate fresh cases",
+      "backup": false,
+      "slide_seconds": 40
+    },
+    {
+      "slide": 10,
+      "member": 3,
+      "title": "Reward across the same action budget",
+      "backup": false,
+      "slide_seconds": 45
+    },
+    {
+      "slide": 11,
+      "member": 3,
+      "title": "Safety and reward must be read together",
+      "backup": false,
+      "slide_seconds": 75
+    },
+    {
+      "slide": 12,
+      "member": 3,
+      "title": "Robustness when sensor noise is misspecified",
+      "backup": false,
+      "slide_seconds": 50
+    },
+    {
+      "slide": 13,
+      "member": 3,
+      "title": "ES2 shifts actions from exploration to reward",
+      "backup": false,
+      "slide_seconds": 40
+    },
+    {
+      "slide": 14,
+      "member": 3,
+      "title": "Saved dashboard evidence",
+      "backup": false,
+      "slide_seconds": 40
+    },
+    {
+      "slide": 15,
+      "member": 3,
+      "title": "Thank You",
+      "backup": false,
+      "slide_seconds": 10
+    }
+  ],
+  "member3_talk_seconds": 300,
+  "final_team_talk_slides": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ]
+}

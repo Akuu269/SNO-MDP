@@ -1,5 +1,7 @@
 # Professor demonstration walkthrough
 
+For the interactive dashboard, use the [UI presentation guide](ui_presentation_guide.md), which gives the exact screens, controls, worked failure example, and interpretation of the measured results.
+
 ## Start with the question
 
 We reproduce a documented SNO-MDP source profile, investigate sensor-noise assumptions, and compare an explicitly labeled certificate-revalidation extension. A finite experiment is not a safety proof.
